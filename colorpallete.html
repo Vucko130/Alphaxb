@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Color Pallete Generator</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="canonical" href="https://jalish.com/colorpallete" />
+    <link rel="stylesheet" href="assets/css/colorpallete.css" />
+    <link rel="stylesheet" href="assets/css/nav.css" />
+    <link rel="icon" href="images/mylogo.png">
+</head>
+
+<body>
+    <div id="wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <div class="inner">
+
+                <!-- Logo -->
+                <a href="/" class="logo">
+                    <div class="square">
+                        <center><span class="logo-text"><b>JA</b></span></center>
+                    </div>
+                    <!-- <span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">J</span> -->
+                </a>
+
+                <!-- Nav -->
+                <nav>
+                    <ul>
+                        <li><a href="#menu">Menu</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+        </header>
+
+        <!-- Menu -->
+        <nav id="menu" style="text-align: left;">
+            <h2>Menu</h2>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="about">About Us</a></li>
+                <li><a href="contact">Contact Us</a></li>
+                <li><a href="privacypolicy">Privacy Policy</a></li>
+            </ul>
+        </nav>
+        <div class="container">
+            <h2 style="letter-spacing: 2px;">Color palette generator</h2>
+
+            <div class="cards">
+                <div class="card" id="myInput">
+                    <div class="canvas"></div>
+                    <div class="hex" onclick="myFunction()">#93B8E3</div>
+                </div>
+                <div class="card" id="myInput">
+                    <div class="canvas"></div>
+                    <div class="hex" onclick="myFunction()">#A3B2C2</div>
+                </div>
+                <div class="card" id="myInput">
+                    <div class="canvas"></div>
+                    <div class="hex" onclick="myFunction()">#FBABA4</div>
+                </div>
+                <div class="card" id="myInput">
+                    <div class="canvas"></div>
+                    <div class="hex" onclick="myFunction()">#7C7C84</div>
+                </div>
+                <div class="card" id="myInput">
+                    <div class="canvas"></div>
+                    <div class="hex" onclick="myFunction()">#AF4884</div>
+                </div>
+            </div>
+
+            <button class="btn" id="btn">Generate palette</button>
+        </div>
+    </div>
+    <script defer src="assets/js/colorpallete.js"></script>
+    <script defer src="assets/js/jquery.min.js"></script>
+    <script defer src="assets/js/browser.min.js"></script>
+    <script defer src="assets/js/breakpoints.min.js"></script>
+    <script defer src="assets/js/util.js"></script>
+    <script defer src="assets/js/main.js"></script>
+</body>
+
+</html>

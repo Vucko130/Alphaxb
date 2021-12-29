@@ -1,0 +1,117 @@
+<html>
+
+<head>
+    <title>Internet Speed Test</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="canonical" href="https://jalish.com/internet" />
+    <link rel="icon" href="images/mylogo.png">
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <style>
+        /* Card */
+        
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 35, 102, 0.2);
+            width: 65%;
+            margin-left: 20%;
+            margin-bottom: 5%;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+        
+        @media screen and (max-width: 736px) {
+            .card {
+                width: 80%;
+                margin-left: 10%;
+            }
+        }
+        /* Square */
+        
+        .square {
+            transition: 1s;
+            height: 65px;
+            width: 70px;
+            border: 5px solid #000;
+            letter-spacing: normal;
+            line-height: normal;
+            /* Color & Background */
+            color: rgb(0, 0, 0);
+            /* Box */
+            height: 50px;
+            width: 50px;
+            /* Positioning */
+            position: relative;
+            /* Effects */
+            transform: matrix(6.12323e-17, -1, 1, 6.12323e-17, 0, 0);
+            transition: transform 0.4s ease-in-out 0s;
+            box-sizing: content-box;
+            border-radius: 10px;
+        }
+        
+        .square:hover {
+            transition: 1s;
+            transform: rotate(90deg);
+        }
+        
+        .logo-text {
+            text-align: center;
+            font-size: 25px;
+            letter-spacing: normal;
+            /* Positioning */
+            position: absolute;
+            top: 25px;
+            bottom: 10.7778px;
+            right: 5.29167px;
+            left: 25px;
+            float: none;
+            display: block;
+            clear: none;
+            z-index: auto;
+            /* Effects */
+            transform: matrix(6.12323e-17, 1, -1, 6.12323e-17, -9.77778, -7.11111);
+            transition: transform 0.4s ease-in-out 0s;
+        }
+    </style>
+</head>
+
+<body class="is-preload" style="background-color: #F7F8FA;">
+    <div id="wrapper">
+        <header id="header">
+            <div class="inner">
+
+                <a href="/" class="logo">
+                    <div class="square">
+                        <center><span class="logo-text"><b>JA</b></span></center>
+                    </div>
+                </a>
+
+                <nav>
+                    <ul>
+                        <li><a href="#menu">Menu</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <nav id="menu">
+            <h2>Menu</h2>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="about">About Us</a></li>
+                <li><a href="contact">Contact Us</a></li>
+                <li><a href="privacypolicy">Privacy Policy</a></li>
+            </ul>
+        </nav>
+        <div class="card">
+            <iframe width="100%" height="650px" frameborder="0" src="https://jalish.speedtestcustom.com" style="border-radius: 10px"></iframe>
+        </div>
+    </div>
+    <script defer src="assets/js/jquery.min.js"></script>
+    <script defer src="assets/js/browser.min.js"></script>
+    <script defer src="assets/js/breakpoints.min.js"></script>
+    <script defer src="assets/js/util.js"></script>
+    <script defer src="assets/js/main.js"></script>
+</body>
+
+</html>

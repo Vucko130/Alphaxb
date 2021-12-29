@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Periodic Table of the Elements</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/periodic_table.css">
+    <link rel="stylesheet" href="assets/css/nav.css">
+    <link rel="icon" href="images/mylogo.png">
+
+</head>
+
+<body>
+    <!-- partial:index.partial.html -->
+    <!-- http://cdn.sci-news.com/images/enlarge4/image_5286e-Periodic-Table.jpg -->
+    <header>
+
+    </header>
+    <div class="wrapper">
+        <header id="header">
+            <div class="inner">
+                <span><a href="/" class="logo">
+                    <div class="square">
+                        <center><span class="logo-text">JA</span></center>
+            </div>
+            <!-- <span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">J</span> -->
+            </a>
+            <center>
+                <h1 style="margin:-75px 0px 1em 0px;">Periodic Table of the Elements</h1>
+            </center>
+            </span>
+            <nav>
+                <ul>
+                    <li><a href="#menu">Menu</a></li>
+                </ul>
+            </nav>
+
+    </div>
+    </header>
+    <nav id="menu">
+        <h2>Menu</h2>
+        <ul style="font-weight: normal;">
+            <li><a href="/">Home</a></li>
+            <li><a href="about">About Us</a></li>
+            <li><a href="contact">Contact Us</a></li>
+            <li><a href="privacypolicy">Privacy Policy</a></li>
+        </ul>
+    </nav>
+    </div>
+    <main>
+        <div id="Elements">
+            <p>
+                The JSON is good, but my parsing script is broken.
+            </p>
+        </div>
+    </main>
+    <footer style="display: none;">
+        <p>
+            The data comes from <a href="https://github.com/Bowserinator/Periodic-Table-JSON">Periodic-Table-JSON</a>, a JSON version of the Periodic Table of the Elements, and is used under Attribution-ShareAlike 3.0 Unported (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>).
+    </footer>
+
+    <div id="Dialog" aria-labelledby="DialogName" role="dialog" tabindex="-1" hidden>
+        <div role="document">
+            <!-- For VO bug -->
+            <h2 id="DialogName">Element Detail</h2>
+            <button type="button" id="DialogClose">Close</button>
+            <!-- Need a region role becase this has a tabindex so keyboard users can scroll the box -->
+            <div id="ElementDetail" tabindex="0" role="region" aria-labelledby="DialogName">
+                The JSON is good, but my parsing script is broken.
+            </div>
+        </div>
+    </div>
+    <div id="Overlay"></div>
+    <!-- partial -->
+    <script src="assets/js/periodic_table.js"></script>
+    <script defer src="assets/js/jquery.min.js"></script>
+    <script defer src="assets/js/browser.min.js"></script>
+    <script defer src="assets/js/breakpoints.min.js"></script>
+    <script defer src="assets/js/util.js"></script>
+    <script defer src="assets/js/main.js"></script>
+</body>
+
+</html>
