@@ -310,7 +310,7 @@ h3 {
 
 .square:hover {
     transition: 0.5s;
-    transform: rotate(90deg);
+    transform: rotate(-180deg);
 }
 
 @media screen and (max-width: 736px) {

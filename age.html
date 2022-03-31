@@ -21,13 +21,12 @@
             <div class="inner">
 
                 <!-- Logo -->
-                <a href="/" class="logo">
+                <!-- <a href="/" class="logo">
                     <div class="square">
                         <center><span class="logo-text"><b>JA</b></span></center>
                     </div>
-                    <!-- <span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">J</span> -->
-                </a>
-
+                </a> -->
+                <a href="/" style="border-bottom: none;"><img class="square" src="images/JA.png"></a>
                 <!-- Nav -->
                 <nav>
                     <ul>
@@ -50,44 +49,26 @@
         </nav>
 
         <div class="container">
-            <div class="inputs-wrapper">
-                <input type="date" id="date-input">
-                <button onclick="ageCalculate()">Calculate</button>
+            <div id="AppBody">
+                <form>
+
+                    <p id="text01">Birth Date: <input id="birthdate" type="date" required></p>
+                    <p class="to-date">To Date: <input id="currentdate" type="date" required></p>
+
+                    <input id="CalButton" type="button" value="Calculate" onclick="calculateDiff()">
+
+                    <p id="showAge"></p>
+                </form>
+
             </div>
-            <div class="outputs-wrapper">
-                <div>
-                    <span id="years">
-                    -
-                </span>
-                    <p>
-                        Years
-                    </p>
-                </div>
-                <div>
-                    <span id="months">
-                    -
-                </span>
-                    <p>
-                        Months
-                    </p>
-                </div>
-                <div>
-                    <span id="days">
-                    -
-                </span>
-                    <p>
-                        Days
-                    </p>
-                </div>
-            </div>
+
         </div>
-    </div>
-    <script defer src="assets/js/age.js"></script>
-    <script defer src="assets/js/jquery.min.js"></script>
-    <script defer src="assets/js/browser.min.js"></script>
-    <script defer src="assets/js/breakpoints.min.js"></script>
-    <script defer src="assets/js/util.js"></script>
-    <script defer src="assets/js/main.js"></script>
+        <script defer src="assets/js/age.js"></script>
+        <script defer src="assets/js/jquery.min.js"></script>
+        <script defer src="assets/js/browser.min.js"></script>
+        <script defer src="assets/js/breakpoints.min.js"></script>
+        <script defer src="assets/js/util.js"></script>
+        <script defer src="assets/js/main.js"></script>
 </body>
 
 </html>

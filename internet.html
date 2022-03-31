@@ -47,11 +47,12 @@
             transition: transform 0.4s ease-in-out 0s;
             box-sizing: content-box;
             border-radius: 10px;
+            transform: rotate(0deg);
         }
         
         .square:hover {
             transition: 1s;
-            transform: rotate(90deg);
+            transform: rotate(-180deg);
         }
         
         .logo-text {
@@ -80,12 +81,12 @@
         <header id="header">
             <div class="inner">
 
-                <a href="/" class="logo">
+                <!-- <a href="/" class="logo">
                     <div class="square">
                         <center><span class="logo-text"><b>JA</b></span></center>
                     </div>
-                </a>
-
+                </a> -->
+                <a href="/" style="border-bottom: none;"><img class="square" src="images/JA.png"></a>
                 <nav>
                     <ul>
                         <li><a href="#menu">Menu</a></li>

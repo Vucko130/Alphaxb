@@ -21,13 +21,12 @@
             <div class="inner">
 
                 <!-- Logo -->
-                <a href="/" class="logo">
+                <!-- <a href="/" class="logo">
                     <div class="square">
                         <center><span class="logo-text"><b>JA</b></span></center>
                     </div>
-                    <!-- <span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">J</span> -->
-                </a>
-
+                </a> -->
+                <a href="/" style="border-bottom: none;"><img class="square" src="images/JA.png"></a>
                 <!-- Nav -->
                 <nav>
                     <ul>
@@ -84,52 +83,52 @@
 
 
 
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/browser.min.js"></script>
-<script src="assets/js/breakpoints.min.js"></script>
-<script src="assets/js/util.js"></script>
-<script src="assets/js/main.js"></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-<script id="rendered-js">
-    var $oBox = $('.outer-box');
-    var $gpa = $('#gpa');
-    var $result = $('.result').hide();
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script id="rendered-js">
+        var $oBox = $('.outer-box');
+        var $gpa = $('#gpa');
+        var $result = $('.result').hide();
 
-    $('.btn').click(function() {
-        $('.block').last().clone().children().val("").parent().appendTo($('.inner-box'));
-    });
-
-    $oBox.on('keyup', '.units', function() {
-        $gpa.text(getTotal());
-    });
-
-    $oBox.on("change", ".grade-select", function() {
-        $gpa.text(getTotal());
-        $result.is(":hidden") && $result.show();
-    });
-
-    function getTotal() {
-        var gradeTotal = 0;
-        var sum = 0;
-        $(".units").each(function() {
-            var $this = $(this);
-            if (!isNaN($this.val()) && !isNaN($this.parent().find('.grade-select').val())) {
-                sum += parseFloat($this.val() || 0) * parseFloat($this.parent().find('.grade-select').val() || 0);
-                gradeTotal += parseFloat($this.val() || 0);
-            }
+        $('.btn').click(function() {
+            $('.block').last().clone().children().val("").parent().appendTo($('.inner-box'));
         });
-        return (sum / gradeTotal).toFixed(2);
-    }
 
-    $(".btn").on("click", function() {
+        $oBox.on('keyup', '.units', function() {
+            $gpa.text(getTotal());
+        });
 
-        $('html, body').animate({
-            scrollTop: $(document).height()
-        }, 'slow');
-        return false;
-    });
-    //# sourceURL=pen.js
-</script>
+        $oBox.on("change", ".grade-select", function() {
+            $gpa.text(getTotal());
+            $result.is(":hidden") && $result.show();
+        });
+
+        function getTotal() {
+            var gradeTotal = 0;
+            var sum = 0;
+            $(".units").each(function() {
+                var $this = $(this);
+                if (!isNaN($this.val()) && !isNaN($this.parent().find('.grade-select').val())) {
+                    sum += parseFloat($this.val() || 0) * parseFloat($this.parent().find('.grade-select').val() || 0);
+                    gradeTotal += parseFloat($this.val() || 0);
+                }
+            });
+            return (sum / gradeTotal).toFixed(2);
+        }
+
+        $(".btn").on("click", function() {
+
+            $('html, body').animate({
+                scrollTop: $(document).height()
+            }, 'slow');
+            return false;
+        });
+        //# sourceURL=pen.js
+    </script>
 
 
 

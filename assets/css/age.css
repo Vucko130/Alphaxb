@@ -38,11 +38,12 @@ p {
     box-sizing: content-box;
     margin-bottom: 10px;
     border-radius: 10px;
+    transform: rotate(0deg);
 }
 
 .square:hover {
     transition: 0.5s;
-    transform: rotate(90deg);
+    transform: rotate(-180deg);
 }
 
 .logo-text {
@@ -79,66 +80,102 @@ p {
     outline: none;
 }
 
-.inputs-wrapper {
-    background-color: #F7F8FA;
+#AppName {
+    color: whitesmoke;
+    font-family: Arial, sans-serif;
+    font-size: 35px;
+    font-weight: bold;
+    margin-top: 15px;
+    text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
+}
+
+.AppVersion {
+    font-size: 15px;
+    text-shadow: none;
+}
+
+p {
+    color: whitesmoke;
+    font-weight: bold;
+}
+
+#AppBody {
+    width: 350px;
+    height: 400px;
+    background-color: rgb(255, 255, 255);
+    margin: 5px auto;
+    padding: 10% 20px 20px 20px;
+    font-size: 20px;
+    text-align: center;
     border: 2px solid white;
-    padding: 30px 25px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgb(0, 35, 102, 0.2);
-    margin-bottom: 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 35, 102, 0.2);
 }
 
-input,
-button {
-    height: 50px;
-    background-color: #ffffff;
-    color: #080808;
-    font-weight: 500;
-    border-radius: 5px;
+#birthdate {
+    height: 30px;
+    width: 180px;
+    font-size: 18px;
+    padding-left: 10px;
+    margin-left: 0px;
 }
 
-input {
-    width: 60%;
-    padding: 0 20px;
-    font-size: 14px;
+#text01 {
+    margin-left: 15px;
 }
 
-button {
-    width: 30%;
-    float: right;
-    background-color: rgb(0, 0, 0);
-    color: white;
+.to-date {
+    letter-spacing: 1px;
+}
+
+#currentdate {
+    height: 30px;
+    width: 180px;
+    font-size: 18px;
+    margin-right: -18px;
+    padding-left: 10px;
+}
+
+#CalButton {
+    background-color: black;
     border-radius: 10px;
     cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 30px;
 }
 
-button:hover {
-    transition: 0.5s;
+#CalButton:hover {
+    transition: 0.5s all ease-in-out;
     background-color: #4169e1;
 }
 
-.outputs-wrapper {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
+#showAge {
+    color: black;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 50px;
 }
 
-.outputs-wrapper div {
-    height: 100px;
-    width: 100px;
-    background-color: #F7F8FA;
-    border-radius: 5px;
-    color: #000000;
-    display: grid;
-    place-items: center;
-    padding: 20px 0;
-    border: 2px solid white;
-    box-shadow: 0 4px 8px rgb(0, 35, 102, 0.2);
+#maker {
+    cursor: pointer;
+    color: black;
+    border-radius: 10px;
 }
 
-span {
-    font-size: 30px;
-    font-weight: 500;
+#ShowTheMaker {
+    color: black;
+    font-size: 12px;
+    margin-top: 0px;
+    font-weight: normal;
 }
 
 p {

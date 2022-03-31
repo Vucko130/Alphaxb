@@ -23,6 +23,12 @@ h1 a {
     }
 }
 
+.square {
+    transform: rotate(0deg);
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
 h2,
 h3,
 h4,
