@@ -61,8 +61,8 @@ footer {
 }
 
 .square:hover {
-    transition: 0.5s;
-    transform: rotate(90deg);
+    transition: 1s;
+    transform: rotate(-180deg);
 }
 
 .logo-text {
