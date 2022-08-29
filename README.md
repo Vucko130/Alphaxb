@@ -1,3 +1,3 @@
-# thepuzzles
+# The Puzzles
 
-<img src="https://img.icons8.com/external-nawicon-outline-color-nawicon/256/000000/external-puzzle-business-nawicon-outline-color-nawicon.png"/>
+<a href="https://thepuzzles.eu.org"> <img align="center" alt="The Puzzles" src="https://thepuzzles.eu.org/images/mylogo.png" width="300" height="300" />
