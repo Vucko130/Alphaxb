@@ -1,3 +1,3 @@
-# thepuzzles
+# The Puzzles
 
-<img src="https://thepuzzles.eu.org/images/mylogo.png" width="300" height="300" />
+<a href="https://thepuzzles.eu.org"> <img align="center" alt="The Puzzles" src="https://thepuzzles.eu.org/images/mylogo.png" width="300" height="300" />
