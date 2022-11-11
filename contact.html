@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/nav.css">
     <link rel="stylesheet" href="assets/css/contact.css">
-    <link rel="canonical" href="https://jalish.com/contact" />
+    <link rel="canonical" href="https://thepuzzles.eu.org/contact" />
     <link rel="icon" href="images/mylogo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script defer src="https://kit.fontawesome.com/66aa7c98b3.js" crossorigin="anonymous"></script>
@@ -49,10 +49,10 @@
             <h2>Contact Us</h2>
             <div class="my-form">
                 <form id="my-form" action="https://formspree.io/f/xzbowrjd" method="POST">
-                    <input type="text" name="firstname" placeholder="Your Name..." /><br>
-                    <input type="email" name="email" placeholder="Your E-mail Address..." /><br>
-                    <input type="text" name="_subject" id="email-subject" placeholder="Subject..." /><br>
-                    <input type="text" name="message" placeholder="What do you want to tell us?" /><br>
+                    <input type="text" name="firstname" required placeholder="Your Name..." inputmode="text" /><br>
+                    <input type="email" name="email" required placeholder="Your E-mail Address..." inputmode="email" /><br>
+                    <input type="text" name="_subject" required id="email-subject" placeholder="Subject..." inputmode="text" /><br>
+                    <input type="text" name="message" required placeholder="What do you want to tell us?" inputmode="text" /><br>
                     <div class="g-recaptcha" data-sitekey="6Ld3UcMaAAAAAOl3GBU3bi1OsZk83P9OnVJYlcV5" style="margin-top: 2%; width: 5%;"></div>
                     <button id="my-form-button" class="submit">Submit <i class="far fa-paper-plane"></i></button>
                     <p id="my-form-status"></p>
