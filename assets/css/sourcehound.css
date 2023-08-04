@@ -1,0 +1,183 @@
+/* CSS Reset */
+body, h1, h2, h3, h4, h5, h6, p, blockquote, pre, dl, dd, ol, ul, figure, hr { margin: 0; padding: 0; }
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; }
+h1, h2, h3, h4, h5, h6 { font-weight: bold; }
+ul { list-style: none; }
+blockquote, q { quotes: none; }
+blockquote::before, blockquote::after, q::before, q::after { content: ''; content: none; }
+table { border-collapse: collapse; border-spacing: 0; }
+
+/************ Square *************/
+
+.square {
+  transition: 1s;
+  margin-left: 90px;
+  margin-top: 100px;
+  border: 5px solid #000;
+  letter-spacing: normal;
+  line-height: normal;
+  /* Color & Background */
+  color: rgb(0, 0, 0);
+  /* Box */
+  height: 50px;
+  width: 50px;
+  /* Positioning */
+  position: relative;
+  /* Effects */
+  transform: matrix(6.12323e-17, -1, 1, 6.12323e-17, 0, 0);
+  transition: transform 0.4s ease-in-out 0s;
+  box-sizing: content-box;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+.square:hover {
+  transition: 0.5s;
+  transform: rotate(-180deg);
+}
+
+.logo-text {
+  text-align: center;
+  font-size: 25px;
+  letter-spacing: normal;
+  /* Positioning */
+  position: absolute;
+  top: 25px;
+  bottom: 10.7778px;
+  right: 5.29167px;
+  left: 25px;
+  float: none;
+  display: block;
+  clear: none;
+  z-index: auto;
+  /* Effects */
+  transform: matrix(6.12323e-17, 1, -1, 6.12323e-17, -9.77778, -7.11111);
+  transition: transform 0.4s ease-in-out 0s;
+}
+
+/* Global Styles */
+body {
+  background-color: #f8f8f8;
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  color: #007BFF;
+  margin-bottom: 20px;
+}
+
+.input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* Added to place buttons below the URL box */
+  margin-bottom: 20px;
+}
+
+input {
+  padding: 12px;
+  border: 2px solid #007BFF;
+  border-radius: 9px; /* Rounded corners */
+  font-size: 16px;
+  flex: 1;
+  margin-bottom: 10px; /* Added to add some space between URL box and buttons */
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  padding: 12px 20px; /* Adjusted padding for larger buttons */
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  margin: 0 5px; /* Adjusted margin between buttons */
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#copyButton {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 12px 20px;
+  font-size: 16px;
+}
+
+#copyButton:hover {
+  background-color: #0056b3;
+}
+
+pre {
+  font-family: 'Fira Code', monospace;
+  font-size: 14px;
+  line-height: 1.4;
+  text-align: left;
+  background-color: #1e1e1e;
+  color: #d4d4d4;
+  padding: 20px;
+  border: 1px solid #333;
+  border-radius: 4px;
+  margin: 0;
+  overflow-x: auto;
+  white-space: pre;
+  position: relative;
+  counter-reset: line;
+  text-align: left;
+}
+
+pre::before {
+  content: attr(data-language);
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 5px 10px;
+  background-color: #333;
+  color: #d4d4d4;
+  font-size: 12px;
+  font-weight: bold;
+  border-top-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+/* Line numbers */
+.line-numbers {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 40px;
+  font-size: 12px;
+  color: #999;
+  text-align: right;
+  padding: 20px 8px;
+  pointer-events: none;
+  user-select: none;
+}
+
+.line-numbers::before {
+  content: counter(line);
+  counter-increment: line;
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
