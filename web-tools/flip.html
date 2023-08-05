@@ -1,37 +1,17 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <title>Internet Speed Test</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <link rel="canonical" href="https://thepuzzles.eu.org/internet" />
-    <link rel="icon" href="images/mylogo.png">
-    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flip A Coin</title>
+    <link rel="icon" href="/images/mylogo.png">
+    <link rel="canonical" href="https://thepuzzles.eu.org/flip" />
+    <!--Stylesheet-->
+    <link rel="stylesheet" href="/assets/css/flip.css">
+    <link rel="stylesheet" href="/assets/css/nav.css" />
     <style>
-        /* Card */
-        
-        .card {
-            box-shadow: 0 4px 8px 0 rgba(0, 35, 102, 0.2);
-            width: 65%;
-            margin-left: 20%;
-            margin-bottom: 5%;
-            border-radius: 10px;
-            transition: 0.3s;
-        }
-        
-        @media screen and (max-width: 736px) {
-            .card {
-                width: 80%;
-                margin-left: 10%;
-            }
-        }
-        /* Square */
-        
         .square {
             transition: 1s;
-            height: 65px;
-            width: 70px;
             border: 5px solid #000;
             letter-spacing: normal;
             line-height: normal;
@@ -43,11 +23,12 @@
             /* Positioning */
             position: relative;
             /* Effects */
-            transform: matrix(6.12323e-17, -1, 1, 6.12323e-17, 0, 0);
+            transform: matrix(6.12323e-17, -1, 1, 6.12323e-17, 0, 0), rotate(0deg);
             transition: transform 0.4s ease-in-out 0s;
             box-sizing: content-box;
             border-radius: 10px;
-            transform: rotate(0deg);
+            margin-top: 5%;
+            margin-left: 5%
         }
         
         .square:hover {
@@ -76,25 +57,32 @@
     </style>
 </head>
 
-<body class="is-preload" style="background-color: #F7F8FA;">
+<body>
     <div id="wrapper">
+
+        <!-- Header -->
         <header id="header">
             <div class="inner">
 
+                <!-- Logo -->
                 <!-- <a href="/" class="logo">
                     <div class="square">
-                        <center><span class="logo-text"><b>JA</b></span></center>
+                        <center><span class="logo-text">JA</span></center>
                     </div>
                 </a> -->
-                <a href="/" style="border-bottom: none;"><img class="square" src="images/JA.png"></a>
+                <a href="/" style="border-bottom: none;"><img class="square" src="/images/JA.png"></a>
+
+                <!-- Nav -->
                 <nav>
                     <ul>
                         <li><a href="#menu">Menu</a></li>
                     </ul>
                 </nav>
+
             </div>
         </header>
 
+        <!-- Menu -->
         <nav id="menu">
             <h2>Menu</h2>
             <ul>
@@ -104,15 +92,36 @@
                 <li><a href="privacypolicy">Privacy Policy</a></li>
             </ul>
         </nav>
-        <div class="card">
-            <iframe width="100%" height="650px" frameborder="0" src="https://thepuzzles.speedtestcustom.com" style="border-radius: 10px"></iframe>
+        <div class="container">
+            <div class="stats">
+                <p id="heads-count">Heads: 0</p>
+                <p id="tails-count">Tails: 0</p>
+            </div>
+            <div class="coin" id="coin">
+                <div class="heads">
+                    <img src="/images/heads.svg">
+                </div>
+                <div class="tails">
+                    <img src="/images/tails.svg">
+                </div>
+            </div>
+            <div class="buttons">
+                <button id="flip-button">
+                Flip Coin
+            </button>
+                <button id="reset-button">
+                Reset
+            </button>
+            </div>
         </div>
     </div>
-    <script defer src="assets/js/jquery.min.js"></script>
-    <script defer src="assets/js/browser.min.js"></script>
-    <script defer src="assets/js/breakpoints.min.js"></script>
-    <script defer src="assets/js/util.js"></script>
-    <script defer src="assets/js/main.js"></script>
+    <!--Script-->
+    <script defer src="/assets/js/flip.js"></script>
+    <script defer src="/assets/js/jquery.min.js"></script>
+    <script defer src="/assets/js/browser.min.js"></script>
+    <script defer src="/assets/js/breakpoints.min.js"></script>
+    <script defer src="/assets/js/util.js"></script>
+    <script defer src="/assets/js/main.js"></script>
 </body>
 
 </html>
