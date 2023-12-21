@@ -13,7 +13,7 @@ const openButton = document.querySelector("[data-open-modal]")
   document.addEventListener("DOMContentLoaded", () => {
     // Function to update the background image
     function updateBackgroundImage(imageName) {
-      document.body.style.backgroundImage = `url(theme_pomodoro/${imageName}.png)`;
+      document.body.style.backgroundImage = `url(/images/${imageName}.png)`;
     }
   
     // Function to add options to the background select
