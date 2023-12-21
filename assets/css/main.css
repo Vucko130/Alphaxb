@@ -300,7 +300,7 @@ h5,
 h6 {
     font-weight: 900;
     line-height: 1.5;
-    margin: 0 0 2em 0;
+    margin: 0 0 1em 0;
     text-transform: uppercase;
     letter-spacing: 0.35em;
 }
@@ -3115,4 +3115,63 @@ body.is-menu-visible #menu .close {
 .symbol:hover {
     transition: 1s;
     transform: rotate(180deg);
+}
+
+.card{
+    transition: 0.5s;
+    background-color: #F7F8FA;
+    padding: 30px 35px 35px 15px;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 8px;
+    border: 1px solid black;
+    box-shadow: 0 4px 8px 0 rgba(0, 35, 102, 0.2);
+    position: relative;
+    cursor: pointer;
+}
+
+.card:hover{
+    transition: 0.5s;
+    transform: scale(1.2);
+}
+
+
+.card h3{
+    margin-top: 35px;
+    color: #3E6470;
+}
+
+.card p{
+    margin-bottom: 35px;
+    color: #36545D;
+    opacity: 85%;
+}
+
+.cardIcon {
+    position: absolute; /* Position the icon absolutely within the card */
+    top: 15px; 
+    right: 15px; 
+    font-size: 20px;
+    color: #36545D;
+    padding: 5px 10px; 
+    border-radius: 50%; 
+    cursor: pointer;
+    transform: transform 0.3s;
+}
+
+
+.cardIcon:hover{
+    animation: bounce 0.5s;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0); /* Bounce at these keyframes */
+    }
+    40% {
+        transform: translateY(-10px); /* Peak of the bounce */
+    }
+    60% {
+        transform: translateY(-5px); /* Bottom of the bounce */
+    }
 }

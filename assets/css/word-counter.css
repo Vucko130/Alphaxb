@@ -2,7 +2,7 @@
 
 .square {
   transition: 1s;
-  margin-left: 90px;
+  margin-left: -60px;
   margin-top: 100px;
   border: 5px solid #000;
   letter-spacing: normal;
@@ -25,25 +25,6 @@
 .square:hover {
   transition: 0.5s;
   transform: rotate(-180deg);
-}
-
-.logo-text {
-  text-align: center;
-  font-size: 25px;
-  letter-spacing: normal;
-  /* Positioning */
-  position: absolute;
-  top: 25px;
-  bottom: 10.7778px;
-  right: 5.29167px;
-  left: 25px;
-  float: none;
-  display: block;
-  clear: none;
-  z-index: auto;
-  /* Effects */
-  transform: matrix(6.12323e-17, 1, -1, 6.12323e-17, -9.77778, -7.11111);
-  transition: transform 0.4s ease-in-out 0s;
 }
 
 /* border box */
@@ -101,6 +82,7 @@ textarea {
   height: 250px;
   padding: 10px;
   border: 1px solid #d9d9d9;
+  border-radius: 6px;
   outline: none;
   font-size: 1rem;
   resize: none;
