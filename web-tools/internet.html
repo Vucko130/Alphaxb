@@ -17,17 +17,19 @@
     <style>
         /* Card */
         
-        .card {
+        .cardI {
+            background-color: #ffffff;
             box-shadow: 0 4px 8px 0 rgba(0, 35, 102, 0.2);
-            width: 65%;
-            margin-left: 20%;
+            width: 50%;
+            /* margin-left: 20%; */
             margin-bottom: 5%;
             border-radius: 10px;
             transition: 0.3s;
+            align-items: center;
         }
         
         @media screen and (max-width: 736px) {
-            .card {
+            .cardI {
                 width: 80%;
                 margin-left: 10%;
             }
@@ -60,25 +62,6 @@
             transition: 1s;
             transform: rotate(-180deg);
         }
-        
-        .logo-text {
-            text-align: center;
-            font-size: 25px;
-            letter-spacing: normal;
-            /* Positioning */
-            position: absolute;
-            top: 25px;
-            bottom: 10.7778px;
-            right: 5.29167px;
-            left: 25px;
-            float: none;
-            display: block;
-            clear: none;
-            z-index: auto;
-            /* Effects */
-            transform: matrix(6.12323e-17, 1, -1, 6.12323e-17, -9.77778, -7.11111);
-            transition: transform 0.4s ease-in-out 0s;
-        }
     </style>
 </head>
 
@@ -109,10 +92,10 @@
                 <li><a href="/contact">Contact Us</a></li>
                 <li><a href="/privacypolicy">Privacy Policy</a></li>
             </ul>
-        </nav>
-        <div class="card">
+        </nav><center>
+        <div class="cardI">
             <script src="https://ws.nperf.com/partner/js?k=0a66fb61-84a5-4ae9-8269-464e6d1a6eb8"></script>
-        </div>
+        </div></center>
     </div>
     <script defer src="/assets/js/jquery.min.js"></script>
     <script defer src="/assets/js/browser.min.js"></script>
