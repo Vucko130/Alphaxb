@@ -58,25 +58,7 @@
             transition: 1s;
             transform: rotate(-180deg);
         }
-        
-        .logo-text {
-            text-align: center;
-            font-size: 25px;
-            letter-spacing: normal;
-            /* Positioning */
-            position: absolute;
-            top: 25px;
-            bottom: 10.7778px;
-            right: 5.29167px;
-            left: 25px;
-            float: none;
-            display: block;
-            clear: none;
-            z-index: auto;
-            /* Effects */
-            transform: matrix(6.12323e-17, 1, -1, 6.12323e-17, -9.77778, -7.11111);
-            transition: transform 0.4s ease-in-out 0s;
-        }
+       
     </style>
 </head>
 
@@ -390,7 +372,11 @@
                     </ul>
                 </section>
                 <ul class="copyright">
-                    <li>AlphaXB Tech &copy; 2021. All rights reserved</li>
+                    <li>Copyright © <span id="copyrightYear"></span> AlphaXB Tech</li>
+                    <script>
+                    var copyrightYear = new Date().getFullYear();
+                    document.getElementById("copyrightYear").innerHTML = copyrightYear;
+                    </script>
                     <li>Developed By: <a href="https://akashmahmud.eu.org" target="_blank">Niaz Mahmud Akash</a></li>
                     <li><a href="privacypolicy">Privacy Policy</a></li>
                 </ul>
