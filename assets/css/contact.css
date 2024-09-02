@@ -14,14 +14,23 @@ body {
     font-family: "Source Sans Pro", Helvetica, sans-serif;
 }
 
-/* CSS */
-#g-recaptcha-response {
-    display: block !important;
-    position: absolute;
-    margin: -50px 0 0 0 !important;
-    z-index: -999999;
-    opacity: 0;
-    }
+.cf-turnstile {
+            display: block; /* Ensure it's treated as a block for alignment */
+            margin: 20px auto; /* Center it within the form */
+            width: 300px; /* Control the width to match form layout */
+        }
+
+        .my-form {
+            text-align: center; /* Center the form contents */
+            max-width: 500px; /* Optional: limit the form's width */
+            margin: auto; /* Center the form on the page */
+        }
+
+        @media (max-width: 600px) {
+            .cf-turnstile {
+                width: 90%; /* Responsive width for smaller screens */
+            }
+        }
 
 /************ Square *************/
 
