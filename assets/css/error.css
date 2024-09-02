@@ -1,5 +1,12 @@
+body{
+	display: flex;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+}
+
 .errorModule {
-  margin: 40px auto 20px;
+  /*margin: 40px auto 20px;*/
   text-align: center;
   color: #A80000;
 }
