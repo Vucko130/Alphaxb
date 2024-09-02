@@ -57,12 +57,16 @@
             <div class="my-form">
                 <form id="my-form" action="https://submit-form.com/C6uuhhwJE" method="POST">
                     <input type="text" name="name" required placeholder="Your Name..." inputmode="text" /><br>
+					<input type="hidden" name="_email.from" value=" " />
+					<input type="hidden" name="_email.template.footer" value="false" />
                     <input type="email" name="email" required placeholder="example@domain.com" inputmode="email" /><br>
                     <input type="text" name="subject" required id="email-subject" placeholder="Subject..." inputmode="text" /><br>
                     <input type="text" name="message" required placeholder="What do you want to tell us?" inputmode="text" /><br>
                     <div class="cf-turnstile" data-sitekey="0x4AAAAAAAiZBZ6AxETpP2Rz" ></div>
                     <button type="submit" id="my-form-button" class="submit">Submit <i class="far fa-paper-plane"></i></button>
-                    <p id="my-form-status"></p>
+                    <input type="hidden" name="_redirect" value="https://alphaxb.com/contact.html" />
+					<input type="hidden" name="_append" value="false" />
+					<p id="my-form-status"></p>
                 </form>
             </div>
         </center>
