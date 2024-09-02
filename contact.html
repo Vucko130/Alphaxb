@@ -57,7 +57,7 @@
                 <form id="my-form" action="https://submit-form.com/C6uuhhwJE" method="POST">
                     <input type="text" name="firstname" required placeholder="Your Name..." inputmode="text" /><br>
                     <input type="email" name="email" required placeholder="example@domain.com" inputmode="email" /><br>
-                    <input type="text" name="_subject" required id="email-subject" placeholder="Subject..." inputmode="text" /><br>
+                    <input type="text" name="subject" required id="email-subject" placeholder="Subject..." inputmode="text" /><br>
                     <input type="text" name="message" required placeholder="What do you want to tell us?" inputmode="text" /><br>
                     <div class="cf-turnstile" data-sitekey="0x4AAAAAAAiZBZ6AxETpP2Rz" style="margin-top: 2%; width: 5%;"></div>
                     <button type="submit" id="my-form-button" class="submit">Submit <i class="far fa-paper-plane"></i></button>
@@ -68,6 +68,7 @@
         <!-- Place this script at the end of the body tag -->
     </div>
     <!-- Scripts -->
+	<script src="https://unpkg.com/jquery/dist/jquery.js"></script>
     <script defer src="assets/js/jquery.min.js"></script>
     <script defer src="assets/js/browser.min.js"></script>
     <script defer src="assets/js/breakpoints.min.js"></script>
@@ -82,22 +83,20 @@
 			},
 		});
 	};
-      fetch("https://submit-form.com/your-form-id", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify({
+      $.post(
+        "https://submit-form.com/C6uuhhwJE",
+        {
           message: "Hello, World",
 		  "cf-turnstile-response": "...",
-        }),
-      })
+        },
+        null,
+        "json" // dataType must be set to json
+      )
         .then(function (response) {
           console.log(response);
         })
-        .catch(function (error) {
-          console.error(error);
+        .catch(function (response) {
+          console.error(response);
         });
     </script>
 </body>
