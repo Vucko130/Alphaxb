@@ -5,12 +5,13 @@
     <title>Contact Us</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/nav.css">
-    <link rel="stylesheet" href="assets/css/contact.css">
-    <link rel="icon" href="images/mylogo.png">
+    <link rel="stylesheet" href="assets/css/nav.css"></>
+    <link rel="stylesheet" href="assets/css/contact.css"></>
+    <link rel="icon" href="images/mylogo.png"></>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script defer src="https://kit.fontawesome.com/66aa7c98b3.js" crossorigin="anonymous"></script>
-    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onloadTurnstileCallback" defer></script>
+    <script src="assets/js/contact.js"></script>
+	<script src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onloadTurnstileCallback" defer></script>
     <script type="text/javascript">
         (function(c,l,a,r,i,t,y){
             c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -68,43 +69,11 @@
         <!-- Place this script at the end of the body tag -->
     </div>
     <!-- Scripts -->
-    <script defer src="assets/js/jquery.min.js"></script>
+    <script defer src="https://unpkg.com/browse/jquery/dist/jquery.min.js"></script>
     <script defer src="assets/js/browser.min.js"></script>
     <script defer src="assets/js/breakpoints.min.js"></script>
     <script defer src="assets/js/util.js"></script>
     <script defer src="assets/js/main.js"></script>
-    <script>
-		window.onloadTurnstileCallback = function () {
-		turnstile.render('#example-container', {
-			sitekey: '0x4AAAAAAAiZBZ6AxETpP2Rz',
-			callback: function(token) {
-				console.log(`Challenge Success ${token}`);
-			},
-		});
-	};
-      document
-        .getElementById("send-button")
-        .addEventListener("click", function () {
-		event.preventDefault();
-          fetch("https://submit-form.com/C6uuhhwJE", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-              Accept: "application/json",
-            },
-            body: JSON.stringify({
-              message: "Hello, World",
-              "cf-turnstile-response": "...",
-            }),
-          })
-            .then(function (response) {
-              console.log(response);
-            })
-            .catch(function (error) {
-              console.error(error);
-            });
-        });
-    </script>
 </body>
 
 </html>
