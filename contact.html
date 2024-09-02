@@ -11,7 +11,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script defer src="https://kit.fontawesome.com/66aa7c98b3.js" crossorigin="anonymous"></script>
     <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onloadTurnstileCallback" defer></script>
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "iavxws4fvy");
+    </script>
 </head>
+<!-- modify this form HTML and place wherever you want your form -->
 
 <body>
     <div id="wrapper">
@@ -46,26 +54,19 @@
         <center>
             <h2>Contact Us</h2>
             <div class="my-form">
-                <form id="my-form">
-					<form action="https://submit-form.com/C6uuhhwJE" method="POST">
-                    <input type="text" name="name" required placeholder="Your Name..." inputmode="text" /><br>
+                <form id="my-form" action="https://submit-form.com/C6uuhhwJE" method="POST">
+                    <input type="text" name="firstname" required placeholder="Your Name..." inputmode="text" /><br>
                     <input type="email" name="email" required placeholder="example@domain.com" inputmode="email" /><br>
-                    <input type="text" name="subject" required id="email-subject" placeholder="Subject..." inputmode="text" /><br>
+                    <input type="text" name="_subject" required id="email-subject" placeholder="Subject..." inputmode="text" /><br>
                     <input type="text" name="message" required placeholder="What do you want to tell us?" inputmode="text" /><br>
-                    
-                    <!-- Turnstile widget, rendered automatically -->
-                    <div class="cf-turnstile" data-sitekey="0x4AAAAAAAiZBZ6AxETpP2Rz"></div>
-                    
-                    <!-- Hidden input field for storing the Turnstile token -->
-                    <input type="hidden" id="cf-turnstile-response" name="cf-turnstile-response" />
-
+                    <div class="cf-turnstile" data-sitekey="0x4AAAAAAAiZBZ6AxETpP2Rz" ></div>
                     <button type="submit" id="my-form-button" class="submit">Submit <i class="far fa-paper-plane"></i></button>
                     <p id="my-form-status"></p>
                 </form>
             </div>
         </center>
+        <!-- Place this script at the end of the body tag -->
     </div>
-
     <!-- Scripts -->
     <script defer src="assets/js/jquery.min.js"></script>
     <script defer src="assets/js/browser.min.js"></script>
@@ -73,41 +74,34 @@
     <script defer src="assets/js/util.js"></script>
     <script defer src="assets/js/main.js"></script>
     <script>
-        // Turnstile token storage function
-        window.onloadTurnstileCallback = function () {
-            // The callback function will be triggered automatically by Turnstile widget.
-        };
-
-        // Event listener for form submission
-        document.getElementById("my-form").addEventListener("submit", function (event) {
-            event.preventDefault(); // Prevent the default form submission
-
-            // Get the Turnstile token
-            const turnstileToken = document.querySelector('.cf-turnstile input[name="cf-turnstile-response"]').value;
-            
-            // Append the token to the form data
-            const formData = new FormData(this);
-            formData.append("cf-turnstile-response", turnstileToken);
-
-            // Send form data using fetch
-            fetch("https://submit-form.com/C6uuhhwJE", {
-                method: "POST",
-                body: formData,
-            })
+		window.onloadTurnstileCallback = function () {
+		turnstile.render('#example-container', {
+			sitekey: '0x4AAAAAAAiZBZ6AxETpP2Rz',
+			callback: function(token) {
+				console.log(`Challenge Success ${token}`);
+			},
+		});
+	};
+      document
+        .getElementById("send-button")
+        .addEventListener("click", function () {
+		event.preventDefault();
+          fetch("https://submit-form.com/C6uuhhwJE", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Accept: "application/json",
+            },
+            body: JSON.stringify({
+              message: "Hello, World",
+              "cf-turnstile-response": "...",
+            }),
+          })
             .then(function (response) {
-                if (response.ok) {
-                    document.getElementById("my-form-status").textContent = "Form submitted successfully!";
-                    document.getElementById("my-form-status").style.color = "green";
-					document.getElementById("my-form").reset(); // Reset form fields
-                } else {
-                    document.getElementById("my-form-status").textContent = "Form submission failed. Please try again.";
-					document.getElementById("my-form-status").style.color = "red";
-                }
+              console.log(response);
             })
             .catch(function (error) {
-                console.error(error);
-                document.getElementById("my-form-status").textContent = "An error occurred. Please try again.";
-				document.getElementById("my-form-status").style.color = "red";
+              console.error(error);
             });
         });
     </script>
