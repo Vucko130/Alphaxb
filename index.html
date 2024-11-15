@@ -21,6 +21,20 @@
     <meta name="revisit-after" content="5days">
     <meta property="og:type" content="website">
     <meta name="robots" content="index,follow">
+	<!-- Content Security Policy (CSP) -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self'; style-src 'self';">
+
+<!-- Referrer Policy -->
+    <meta name="referrer" content="no-referrer">
+
+<!-- X-Frame-Options -->
+    <meta http-equiv="X-Frame-Options" content="DENY">
+
+<!-- X-Content-Type-Options -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+
+<!-- Permissions Policy -->
+    <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
 	<script type="text/javascript">
         (function(c,l,a,r,i,t,y){
             c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
