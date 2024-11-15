@@ -138,3 +138,24 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+let lastUpdateTime;
+
+document.addEventListener("visibilitychange", () => {
+  if (document.hidden) {
+    // Save the current time when the tab becomes hidden
+    lastUpdateTime = Date.now();
+  } else if (interval && timeRemaining > 0) {
+    // Calculate the elapsed time when the tab becomes visible
+    const elapsedTime = Math.floor((Date.now() - lastUpdateTime) / 1000);
+    timeRemaining -= elapsedTime;
+
+    // If the timer is finished, switch the timer
+    if (timeRemaining <= 0) {
+      clearInterval(interval);
+      new Audio(
+        "https://www.soundjay.com/misc/sounds/bell-ringing-05.mp3"
+      ).play();
+      switchTimer();
+    }
+  }
+});
